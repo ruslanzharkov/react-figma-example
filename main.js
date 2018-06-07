@@ -12,6 +12,7 @@ app.get('/figma/update', (req, res) => {
 })
 
 const updatePage = (res) => {
+  console.log('tree')
   let headers = new fetch.Headers();
   let componentList = [];
   let devToken = process.env.DEV_TOKEN;
@@ -29,7 +30,7 @@ const updatePage = (res) => {
     let vectorVConstraint = null;
     let vectorHConstraint = null;
 
-    console.log('tree')
+    
     function paintsRequireRender(paints) {
       if (!paints) return false;
 
