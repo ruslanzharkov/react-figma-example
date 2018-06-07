@@ -7,6 +7,7 @@ const express = require('express');
 const app =  express();
 
 app.get('/figma/update', (req, res) => {
+  console.log('--begin')
   updatePage(res);
 })
 
@@ -172,6 +173,7 @@ const updatePage = (res) => {
     try {
       fs.writeFile(path, contents, function(err) {
         if (err) console.log(err);
+        console.log('updatePage')
         res.send({status: 'ok'});
       });
     } catch(err) {
