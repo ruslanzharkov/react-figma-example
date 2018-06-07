@@ -12,7 +12,7 @@ app.get('/figma/update', (req, res) => {
 })
 
 const updatePage = (res) => {
-  console.log('tree')
+  
   let headers = new fetch.Headers();
   console.log('headers');
   let componentList = [];
@@ -30,9 +30,10 @@ const updatePage = (res) => {
     let vectorsOnly = node.name.charAt(0) !== '#';
     let vectorVConstraint = null;
     let vectorHConstraint = null;
-
+    console.log('tree')
     
     function paintsRequireRender(paints) {
+      console.log('headers');
       if (!paints) return false;
 
       let numPaints = 0;
@@ -41,8 +42,9 @@ const updatePage = (res) => {
 
         numPaints++;
         if (paint.type === 'EMOJI') return true;
+        console.log('headers');
       }
-
+      console.log('headers');
       return numPaints > 1;
     }
 
