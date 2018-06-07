@@ -1,14 +1,13 @@
 import React, { PureComponent } from 'react';
 import { getComponentFromId } from '../figmaComponents';
-
+import { workers } from '../content';
 export class CDesignFrame extends PureComponent {
   state={}
 
   render() {
     const Component = getComponentFromId(this.props.nodeId);
-    if(this.props.listItems.length) {
-      console.log('props is', this.props.listItems);
-      return this.props.listItems.map((item) => 
+    if(workers.length) {
+      return workers.map((item) => 
         {
           let value = {
             "logo": item.logo,
@@ -25,9 +24,5 @@ export class CDesignFrame extends PureComponent {
     } else {
       return <Component {...this.props} {...this.state}/>
     }
-
-
-    // const Component = getComponentFromId(this.props.nodeId);
-    // return <Component {...this.props} {...this.state}/>
   }
 }
