@@ -14,6 +14,7 @@ app.get('/figma/update', (req, res) => {
 const updatePage = (res) => {
   console.log('tree')
   let headers = new fetch.Headers();
+  console.log('headers');
   let componentList = [];
   let devToken = process.env.DEV_TOKEN;
   headers.append('X-Figma-Token', devToken);
