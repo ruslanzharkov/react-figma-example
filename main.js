@@ -86,8 +86,11 @@ const updatePage = (res) => {
   }
 
   async function main() {
+    console.log('1');
     let resp = await fetch(`${baseUrl}/v1/files/a9ukC7nDt2tSOa0QVqhr3oqy`, {headers});
+    console.log('2');
     let data = await resp.json();
+    console.log('3');
 
     let doc = data.document;
     let canvas = doc.children[0];
