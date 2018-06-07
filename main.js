@@ -29,6 +29,7 @@ const updatePage = (res) => {
     let vectorVConstraint = null;
     let vectorHConstraint = null;
 
+    console.log('tree')
     function paintsRequireRender(paints) {
       if (!paints) return false;
 
