@@ -8,11 +8,8 @@ const app =  express();
 
 app.get('/figma/update', (req, res) => {
   console.log('--begin')
-  updatePage(res);
-})
+  // updatePage(res);
 
-const updatePage = (res) => {
-  
   let headers = new fetch.Headers();
   console.log('headers');
   let componentList = [];
@@ -188,6 +185,10 @@ const updatePage = (res) => {
       res.sendStatus(500);
     }
   }
+})
+
+const updatePage = (res) => {
+  
 }
 
 app.listen(8080, () => {
