@@ -89,7 +89,7 @@ class CDesignFrame1D2 extends PureComponent {
         <div style={{"zIndex":4,"justifyContent":"flex-end"}} className="outerDiv">
           <div
             id="22:7"
-            style={{"marginRight":30,"width":198,"minWidth":198,"height":null,"marginTop":-65,"marginBottom":43,"minHeight":22,"color":"rgba(2, 16, 35, 1)","fontSize":18,"fontWeight":400,"fontFamily":"Roboto","textAlign":"RIGHT","fontStyle":"normal","lineHeight":"125%","letterSpacing":"0px"}}
+            style={{"marginRight":30,"width":198,"minWidth":198,"height":null,"marginTop":-65,"marginBottom":43,"minHeight":22,"color":"rgba(215, 33, 33, 1)","fontSize":18,"fontWeight":400,"fontFamily":"Roboto","textAlign":"RIGHT","fontStyle":"normal","lineHeight":"125%","letterSpacing":"0px"}}
             className="innerDiv"
           >
             <div>

@@ -7,6 +7,10 @@ const express = require('express');
 const app =  express();
 
 app.get('/figma/update', (req, res) => {
+  updatePage(res);
+})
+
+const updatePage = (res) => {
   let headers = new fetch.Headers();
   let componentList = [];
   let devToken = process.env.DEV_TOKEN;
@@ -165,18 +169,16 @@ app.get('/figma/update', (req, res) => {
     contents += nextSection;
 
     let path = "./src/figmaComponents.js";
-    fs.writeFile(path, contents, function(err) {
-      if (err) console.log(err);
-      res.send({status: 'ok'});
-    });
+    try {
+      fs.writeFile(path, contents, function(err) {
+        if (err) console.log(err);
+        res.send({status: 'ok'});
+      });
+    } catch(err) {
+      res.sendStatus(500);
+    }
   }
-
-  main().catch((err) => {
-    console.error(err);
-    console.error(err.stack);
-  });
-
-})
+}
 
 app.listen(8080, () => {
   console.log('Server is up for figma api:)');
