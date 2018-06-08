@@ -7,11 +7,7 @@ const express = require('express');
 const app =  express();
 
 app.get('/figma/update', (req, res) => {
-  console.log('--begin')
-  // updatePage(res);
-
   let headers = new fetch.Headers();
-  console.log('headers');
   let componentList = [];
   let devToken = process.env.DEV_TOKEN;
   headers.append('X-Figma-Token', devToken);
@@ -27,10 +23,8 @@ app.get('/figma/update', (req, res) => {
     let vectorsOnly = node.name.charAt(0) !== '#';
     let vectorVConstraint = null;
     let vectorHConstraint = null;
-    console.log('tree')
-    
+
     function paintsRequireRender(paints) {
-      console.log('headers');
       if (!paints) return false;
 
       let numPaints = 0;
@@ -39,9 +33,8 @@ app.get('/figma/update', (req, res) => {
 
         numPaints++;
         if (paint.type === 'EMOJI') return true;
-        console.log('headers');
       }
-      console.log('headers');
+
       return numPaints > 1;
     }
 
@@ -88,11 +81,8 @@ app.get('/figma/update', (req, res) => {
   }
 
   async function main() {
-    console.log('1');
     let resp = await fetch(`${baseUrl}/v1/files/a9ukC7nDt2tSOa0QVqhr3oqy`, {headers});
-    console.log('2');
     let data = await resp.json();
-    console.log('3');
 
     let doc = data.document;
     let canvas = doc.children[0];
@@ -178,18 +168,19 @@ app.get('/figma/update', (req, res) => {
     try {
       fs.writeFile(path, contents, function(err) {
         if (err) console.log(err);
-        console.log('updatePage')
         res.send({status: 'ok'});
       });
     } catch(err) {
       res.sendStatus(500);
     }
   }
-})
 
-const updatePage = (res) => {
-  
-}
+  main().catch((err) => {
+    console.error(err);
+    console.error(err.stack);
+  });
+
+})
 
 app.listen(8080, () => {
   console.log('Server is up for figma api:)');

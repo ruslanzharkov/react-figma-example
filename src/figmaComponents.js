@@ -61,7 +61,7 @@ class CDesignFrame1D2 extends PureComponent {
         <div style={{"zIndex":2}} className="outerDiv">
           <div
             id="22:5"
-            style={{"marginLeft":363,"width":267,"minWidth":267,"height":null,"marginTop":-65,"marginBottom":43,"minHeight":22,"color":"rgba(130, 135, 158, 1)","fontSize":18,"fontWeight":400,"fontFamily":"Roboto","textAlign":"LEFT","fontStyle":"normal","lineHeight":"125%","letterSpacing":"0px"}}
+            style={{"marginLeft":363,"width":267,"minWidth":267,"height":null,"marginTop":-65,"marginBottom":43,"minHeight":22,"color":"rgba(242, 201, 76, 1)","fontSize":18,"fontWeight":400,"fontFamily":"Roboto","textAlign":"LEFT","fontStyle":"normal","lineHeight":"125%","letterSpacing":"0px"}}
             className="innerDiv"
           >
             <div>
@@ -89,7 +89,7 @@ class CDesignFrame1D2 extends PureComponent {
         <div style={{"zIndex":4,"justifyContent":"flex-end"}} className="outerDiv">
           <div
             id="22:7"
-            style={{"marginRight":30,"width":198,"minWidth":198,"height":null,"marginTop":-65,"marginBottom":43,"minHeight":22,"color":"rgba(215, 33, 33, 1)","fontSize":18,"fontWeight":400,"fontFamily":"Roboto","textAlign":"RIGHT","fontStyle":"normal","lineHeight":"125%","letterSpacing":"0px"}}
+            style={{"marginRight":30,"width":198,"minWidth":198,"height":null,"marginTop":-65,"marginBottom":43,"minHeight":22,"color":"rgba(39, 238, 107, 1)","fontSize":18,"fontWeight":400,"fontFamily":"Roboto","textAlign":"RIGHT","fontStyle":"normal","lineHeight":"125%","letterSpacing":"0px"}}
             className="innerDiv"
           >
             <div>
